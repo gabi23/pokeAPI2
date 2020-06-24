@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PokemonPreviewComponent } from './components/pokemon-preview/pokemon-preview.component';
+import { GenerationComponent } from './components/generation/generation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonPreviewComponent,
+    GenerationComponent
   ],
   imports: [
     BrowserModule,
