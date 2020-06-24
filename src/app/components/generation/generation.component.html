@@ -1,0 +1,6 @@
+<div class="generation">
+    <app-pokemon-preview *ngFor="let pokemon of pokemons; index as i"
+        [image]="'https://pokeres.bastionbot.org/images/pokemon/' + pokemon.url.slice(42,-1) + '.png'"
+        [id]="pokemon.url.slice(42,-1)" [name]="pokemon.name">
+    </app-pokemon-preview>
+</div>
