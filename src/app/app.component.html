@@ -1,7 +1,7 @@
 <div class="navbar">
   <img class="pokemon-logo" src="./assets/img/Pokemon-Logo.png" alt="Pokemon logo">
   <div>
-    <button routerLink="/generation/{{i+1}}" *ngFor="let gen of generations; index as i">Generation {{i+1}}</button>
+    <button class="button type1" routerLink="/generation/{{i+1}}" *ngFor="let gen of generations; index as i">Generation {{i+1}}</button>
   </div>
 </div>
 <router-outlet></router-outlet>
