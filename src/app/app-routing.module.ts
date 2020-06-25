@@ -5,7 +5,6 @@ import { GenerationComponent } from './components/generation/generation.componen
 
 const routes: Routes = [
   {path: 'generation', redirectTo: 'generation/1', pathMatch: 'full' },
-  /* {path: 'generation/:id', component: GenerationComponent } */
   {path: 'generation/:id', component: GenerationComponent }
 ];
 
