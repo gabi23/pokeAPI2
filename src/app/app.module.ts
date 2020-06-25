@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonPreviewComponent } from './components/pokemon-preview/pokemon-preview.component';
 import { GenerationComponent } from './components/generation/generation.component';
+import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokemonPreviewComponent,
-    GenerationComponent
+    GenerationComponent,
+    PokemonDetailsComponent
   ],
   imports: [
     BrowserModule,
