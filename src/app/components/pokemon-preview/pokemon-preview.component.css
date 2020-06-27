@@ -32,9 +32,11 @@ p {
   height: 430px;
 }
 
-/* .cardBox:hover .card {
-  transform: rotateY( 180deg);
-} */
+.cardBox:hover .card {
+  border-color: red;
+  background-color: grey;
+  font-weight: bold;
+}
 
 .card {
   background: #222;
