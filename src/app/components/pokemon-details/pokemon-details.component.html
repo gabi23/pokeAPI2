@@ -1,1 +1,42 @@
-<p>pokemon-details works!</p>
+<div class="card-container">
+    <div class="cardBox">
+        <div class="card">
+            <div class="container">
+                <div class="img-container">
+                    <img id="img-pokemon" src="https://pokeres.bastionbot.org/images/pokemon/{{id}}.png"
+                        alt="pokemon image">
+                </div>
+                <div class="types">
+                    <div class="icon-type-wrapper">
+                        <img [class]="'icon-'+types[0]"
+                            [src]="'https://db.pokemongohub.net/images/badges/thumb/Badge_Type_'+types[0][0].toUpperCase() + types[0].slice(1)+'_01.png'">
+                        <span [class]="types[0]">{{types[0]}}</span>
+                    </div>
+                    <div *ngIf="types.length == 2" class="icon-type-wrapper">
+                        <img [ngClass]="'icon-'+types[1]"
+                            [src]="'https://db.pokemongohub.net/images/badges/thumb/Badge_Type_'+types[1][0].toUpperCase() + types[1].slice(1)+'_01.png'">
+                        <span [class]="types[1]">{{types[1]}}</span>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stats">
+                        <p>Height(m): {{height}}</p>
+                        <p>Weight(Kg): {{weight}}</p>
+                        <p>HP: {{stats[0]}}</p>
+                        <p>Speed: {{stats[5]}}</p>
+                    </div>
+                    <div class="stats">
+                        <p>Attack: {{stats[1]}}</p>
+                        <p>Defense: {{stats[2]}}</p>
+                        <p>Special Attack: {{stats[3]}}</p>
+                        <p>Special Defense: {{stats[4]}}</p>
+                    </div>
+                </div>
+                <div class="identification">
+                    <span>#{{id}}</span>
+                    <span>{{name}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
