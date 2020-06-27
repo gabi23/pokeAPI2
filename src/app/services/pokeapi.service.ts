@@ -17,17 +17,29 @@ export type Pokemon = {
 })
 export class PokeapiService {
 
-  APIgenerationURL = "https://pokeapi.co/api/v2/generation";
+  generationURL = "https://pokeapi.co/api/v2/generation";
+  pokemonURL = "https://pokeapi.co/api/v2/pokemon";
   constructor() { }
 
   getGenerations(): Promise<Generation[]>{
-    return axios.get(this.APIgenerationURL)
-      .then(response => response.data.results);
+    const generations = axios.get(this.generationURL)
+                          .then(response => response.data.results)
+                          .catch(error => console.log(error));
+    return generations;
   }
 
   getGenerationByID(id: string): Promise<Generation[]>{
-    return axios.get(`${ this.APIgenerationURL}/${id}`)
-      .then(response => response.data.pokemon_species);
+    const generation = axios.get(`${ this.generationURL}/${id}`)
+                        .then(response => response.data.pokemon_species)
+                        .catch(error => console.log(error));
+    return generation;
+  }
+
+  getPokemonData(pokemonName: string): Promise<any[]>{
+    const pokemonData = axios.get(`${ this.pokemonURL}/${pokemonName}`)
+                          .then(response => response.data)
+                          .catch(error => console.log(error));
+    return pokemonData;
   }
 
 }
